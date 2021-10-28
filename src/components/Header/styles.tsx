@@ -27,10 +27,20 @@ export const Wrapper = styled.div`
     color: var(--white);
     letter-spacing: 3px;
 
+    @media (max-width: 720px) {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+
     span {
       font-size: 2rem;
       color: var(--black);
       letter-spacing: 2px;
+
+      @media (max-width: 720px) {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+      }
     }
   }
 `;
@@ -39,10 +49,18 @@ export const HeaderActions = styled.div`
   display: flex;
   align-items: center;
 
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+
   h3 {
     font-size: 1.5rem;
     color: var(--white);
     letter-spacing: 1px;
+
+    @media (max-width: 720px) {
+      font-size: 1.3rem;
+    }
   }
 
   button {
@@ -56,6 +74,11 @@ export const HeaderActions = styled.div`
     color: var(--black);
 
     transition: filter 0.2s;
+
+    @media (max-width: 720px) {
+      width: 9rem;
+      height: 2rem;
+    }
 
     &:hover {
       filter: brightness(0.8);
