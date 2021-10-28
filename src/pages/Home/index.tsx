@@ -17,6 +17,7 @@ export function Home(): ReactElement {
             Para buscarmos os planos disponíveis, por favor insira seu CEP
             abaixo.
           </span>
+
           <form>
             <Input subtitle="Apenas números" type="text" />
 
