@@ -76,17 +76,15 @@ export const WrongCepButton = styled.div`
 
     // Tablet breakpoint
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-      width: 19rem;
-      height: 3.5rem;
-      padding: 0 1rem;
-      font-size: 1.5rem;
+      width: 18rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
     }
 
     // Smartphone breakpoint
     @media screen and (max-width: 767px) {
-      width: 18rem;
-      height: 3.5rem;
-      padding: 0 0.8rem;
+      width: 16rem;
+      padding: 1rem;
       font-size: 1rem;
     }
 
