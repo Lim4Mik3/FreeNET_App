@@ -10,12 +10,34 @@ export const Content = styled.main`
   flex-direction: column;
   justify-content: space-between;
 
+  // Tablet breakpoint
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 1rem 1.3rem;
+  }
+
+  // Smartphone breakpoint
+  @media screen and (max-width: 767px) {
+    padding: 0.8rem;
+  }
+
   span {
     padding: 2rem;
     font-size: 1.43rem;
     font-weight: 400;
     font-family: 'Roboto', cursive;
     color: var(--title);
+
+    // Tablet breakpoint
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      padding: 1.7rem;
+      font-size: 1.43rem;
+    }
+
+    // Smartphone breakpoint
+    @media screen and (max-width: 767px) {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
   }
 
   button {

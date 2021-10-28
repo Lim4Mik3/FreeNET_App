@@ -10,6 +10,16 @@ const OfferCatalog: React.FC = () => {
         description="Tenha 80 megas de internet para usar o mes todo!"
         price="R$ 50,99"
       />
+      <OfferCard
+        title="Oferta 01"
+        description="Tenha 80 megas de internet para usar o mes todo!"
+        price="R$ 50,99"
+      />
+      <OfferCard
+        title="Oferta 01"
+        description="Tenha 80 megas de internet para usar o mes todo!"
+        price="R$ 50,99"
+      />
     </Container>
   );
 };
