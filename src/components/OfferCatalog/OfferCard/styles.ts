@@ -7,7 +7,7 @@ export const Container = styled.div`
   box-shadow: 0px 0px 10px 2px rgba(18, 18, 18, 0.3);
 
   header {
-    height: 1rem;
+    height: 2.5rem;
 
     span {
       text-transform: uppercase;
