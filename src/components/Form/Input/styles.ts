@@ -16,7 +16,7 @@ export const InputCustom = styled.input`
     width: 19rem;
     height: 3.5rem;
     padding: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   // Smartphone breakpoint
@@ -24,7 +24,7 @@ export const InputCustom = styled.input`
     width: 18rem;
     height: 3.5rem;
     padding: 0 0.8rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   &::placeholder {
