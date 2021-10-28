@@ -1,3 +1,4 @@
+import { useOffers } from '../../../hooks/useOffers';
 import { Container } from './styles';
 
 interface OfferCard {
@@ -11,6 +12,8 @@ const OfferCard: React.FC<OfferCard> = ({
   price,
   description,
 }: OfferCard) => {
+  const { loadOffers } = useOffers();
+
   return (
     <Container>
       <header>
@@ -20,7 +23,9 @@ const OfferCard: React.FC<OfferCard> = ({
         <p>{description}</p>
         <strong>{price}</strong>
 
-        <button type="button">Assine já</button>
+        <button type="button" onClick={loadOffers}>
+          Assine já
+        </button>
       </div>
     </Container>
   );

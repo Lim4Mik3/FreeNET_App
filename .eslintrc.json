@@ -52,7 +52,9 @@
           }
         ],
         "react/require-default-props": "off",
-        "react/jsx-props-no-spreading": [0]
+        "react/jsx-props-no-spreading": [0],
+        "no-console": "off",
+        "@typescript-eslint/no-var-requires": [0]
       },
       "settings": {
         "import/resolver": {
