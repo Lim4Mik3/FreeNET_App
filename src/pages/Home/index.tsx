@@ -1,22 +1,12 @@
 import { ReactElement } from 'react';
+import { Header } from '../../components/Header';
 
-import { Header, Container, Actions, Content, Footer } from './styles';
+import { Content, Footer } from './styles';
 
 export function Home(): ReactElement {
   return (
     <>
-      <Header>
-        <Container>
-          <strong>
-            Free<span>NET</span>
-          </strong>
-
-          <Actions>
-            <h3>11 3601-3601</h3>
-            <button type="button">CONTRATE</button>
-          </Actions>
-        </Container>
-      </Header>
+      <Header />
 
       <Content>
         <div>
