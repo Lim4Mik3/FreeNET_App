@@ -5,8 +5,10 @@ Foi proposta uma situação problema onde foi necessário desenvolvedor uma land
 
 ###  Aplicação online: [https://affectionate-curie-72a657.netlify.app](https://affectionate-curie-72a657.netlify.app/)
 
-**Features da aplicação:**
+**Desenvolvimento da aplicação**
 - Aplicação desenvolvida com React JS e Typescript.
+- Utilização de ESLINT e Prettier para boas práticas em código.
+- Utilização de commit-linter para padronização dos commits ao github, boas práticas do git.
 - Aplicação totalmente responsiva (tablets e smartphones).
 - Interface seguindo conceitos e boas práticas de UI/UX.
 -  Componentização dos elementos.
