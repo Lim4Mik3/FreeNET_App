@@ -1,4 +1,6 @@
 import { ReactElement } from 'react';
+import { Button } from '../../components/Form/Button';
+import { Input } from '../../components/Form/Input';
 
 import { PublicLayout } from '../../components/PublicLayout';
 
@@ -16,10 +18,9 @@ export function Home(): ReactElement {
             abaixo.
           </span>
           <form>
-            <input id="zipcode" type="text" autoComplete="off" />
-            <p>Apenas números</p>
+            <Input subtitle="Apenas números" type="text" />
 
-            <button type="submit">Buscar</button>
+            <Button title="Buscar" type="submit" />
           </form>
         </div>
       </Content>

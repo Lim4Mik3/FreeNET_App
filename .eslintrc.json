@@ -50,7 +50,9 @@
             "ts": "never",
             "tsx": "never"
           }
-        ]
+        ],
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": [0]
       },
       "settings": {
         "import/resolver": {
