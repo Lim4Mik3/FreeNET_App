@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-
   :root {
     --red-chill: #F51720;
     --gold: #F8D210;
@@ -29,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body {
+  #root {
     width: 100vw;
     height: 100vh;
   }

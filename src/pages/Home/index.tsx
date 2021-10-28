@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Header, Container, Actions, Content } from './styles';
+import { Header, Container, Actions, Content, Footer } from './styles';
 
 export function Home(): ReactElement {
   return (
@@ -27,13 +27,18 @@ export function Home(): ReactElement {
             abaixo.
           </span>
           <form>
-            <p>Apenas números</p>
             <input id="zipcode" type="text" autoComplete="off" />
+            <p>Apenas números</p>
 
             <button type="submit">Buscar</button>
           </form>
         </div>
       </Content>
+
+      <Footer>
+        <p>FreeNET Serviços de comunicação e internet.</p>
+        <span>Ligue e contrate agora mesmo</span>
+      </Footer>
     </>
   );
 }
