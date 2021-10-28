@@ -1,8 +1,14 @@
-import { ChangeEventHandler, ReactElement, useState } from 'react';
+import {
+  ChangeEventHandler,
+  FormEventHandler,
+  ReactElement,
+  useState,
+} from 'react';
+
 import { Button } from '../../components/Form/Button';
 import { Input } from '../../components/Form/Input';
-
 import { PublicLayout } from '../../components/PublicLayout';
+import { useOffers } from '../../hooks/useOffers';
 import { zipcodeMask } from '../../utils/zipcodeMask';
 
 import { Content } from './styles';
@@ -10,10 +16,19 @@ import { Content } from './styles';
 export function Home(): ReactElement {
   const [zipcode, setZipcode] = useState('');
 
+  const { getCustomerAddress } = useOffers();
+
   const handleZipcodeInput: ChangeEventHandler<HTMLInputElement> = (event) => {
     const { value } = event.target;
 
     setZipcode(zipcodeMask(value));
+  };
+
+  const handleFormSubmit: FormEventHandler<HTMLFormElement> = (event): void => {
+    event.preventDefault();
+    if (!zipcode.trim()) return;
+
+    getCustomerAddress(zipcode);
   };
 
   return (
@@ -27,7 +42,7 @@ export function Home(): ReactElement {
             abaixo.
           </span>
 
-          <form>
+          <form onSubmit={handleFormSubmit}>
             <Input
               subtitle="Apenas números"
               type="text"

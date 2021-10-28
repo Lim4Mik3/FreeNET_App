@@ -1,15 +1,18 @@
 import { ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { OffersContextProvider } from './hooks/useOffers';
 
-import { Router } from './Router';
+import { Routes } from './Router';
 import { GlobalStyle } from './styles/Global';
 
 function App(): ReactElement {
   return (
-    <OffersContextProvider>
-      <Router />
-      <GlobalStyle />
-    </OffersContextProvider>
+    <BrowserRouter>
+      <OffersContextProvider>
+        <Routes />
+        <GlobalStyle />
+      </OffersContextProvider>
+    </BrowserRouter>
   );
 }
 
