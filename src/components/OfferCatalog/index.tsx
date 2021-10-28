@@ -1,20 +1,15 @@
-import { useEffect } from 'react';
 import { useOffers } from '../../hooks/useOffers';
 import { OfferCard } from './OfferCard';
 
 import { Container } from './styles';
 
 const OfferCatalog: React.FC = () => {
-  const { loadOffers, userData } = useOffers();
-
-  useEffect(() => {
-    loadOffers();
-  }, []);
+  const { customerData } = useOffers();
 
   let offers;
 
-  if (userData.offers) {
-    offers = userData.offers.map((offer) => ({
+  if (customerData.offers) {
+    offers = customerData.offers.map((offer) => ({
       ...offer,
       formatedPrice: new Intl.NumberFormat('pt-BR', {
         style: 'currency',

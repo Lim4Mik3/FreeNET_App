@@ -8,14 +8,14 @@ import { useOffers } from '../../hooks/useOffers';
 import { Content, WrongCepButton } from './styles';
 
 export function Offers(): ReactElement {
-  const { customerAdress } = useOffers();
+  const { customerData } = useOffers();
 
   return (
     <PublicLayout>
       <Content>
         <span>
           Exibindo ofertas para:{' '}
-          {`${customerAdress.street}, ${customerAdress.neighborhood} - ${customerAdress.nation}`}
+          {`${customerData.street}, ${customerData.neighborhood} - ${customerData.nation}`}
         </span>
 
         <OfferCatalog />

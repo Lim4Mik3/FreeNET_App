@@ -11,47 +11,50 @@ import { api } from '../services/api';
 import offersDataJSON from '../offers.json';
 
 interface OffersContextData {
-  getCustomerAddress: (zipcode: string) => Promise<void>;
-  loadOffers: () => void;
-  customerAdress: CustomerAdressInfo;
-  userData: UserDataDTO;
+  getCustomerOffers: (zipcode: string) => Promise<void>;
+  customerData: CustomerDataDTO;
 }
 
 interface OffersContextProviderProps {
   children: ReactNode;
 }
 
-interface CustomerAdressInfo {
+interface CustomerDataDTO {
+  querySuccess: boolean;
+  offers: Offer[];
   zipcode: string;
   street: string;
   neighborhood: string;
   nation: string;
 }
 
-interface UserDataDTO {
-  offers: Offer[];
-  zipcode: string;
-}
-
-interface Offer {
+export interface Offer {
   id: number;
   isSelected: boolean;
   name: string;
   price: number;
 }
 
+const customerDataInitalValue: CustomerDataDTO = {
+  querySuccess: false,
+  offers: [],
+  zipcode: '',
+  street: '',
+  neighborhood: '',
+  nation: '',
+};
+
 const OffersContext = createContext<OffersContextData>({} as OffersContextData);
 
 export function OffersContextProvider({
   children,
 }: OffersContextProviderProps): ReactElement {
-  const [customerAdress, setCustomerAdress] = useState<CustomerAdressInfo>(
-    {} as CustomerAdressInfo
+  const [customerData, setCustomerData] = useState<CustomerDataDTO>(
+    customerDataInitalValue
   );
-  const [userData, setUserData] = useState<UserDataDTO>({} as UserDataDTO);
   const history = useHistory();
 
-  const getCustomerAddress = async (zipcode: string): Promise<void> => {
+  const getCustomerOffers = async (zipcode: string): Promise<void> => {
     const response = await api.get(`/${zipcode}/json`);
 
     if (response.status !== 200) {
@@ -60,30 +63,23 @@ export function OffersContextProvider({
 
     const { cep, bairro, logradouro, uf } = response.data;
 
-    setCustomerAdress({
+    setCustomerData({
+      querySuccess: true,
       zipcode: cep,
       street: logradouro,
       neighborhood: bairro,
       nation: uf,
+      offers: offersDataJSON.userData.offers,
     });
 
     history.push('/offers');
   };
 
-  const loadOffers = (): void => {
-    setUserData({
-      zipcode: customerAdress.zipcode,
-      offers: offersDataJSON.userData.offers,
-    });
-  };
-
   return (
     <OffersContext.Provider
       value={{
-        getCustomerAddress,
-        loadOffers,
-        customerAdress,
-        userData,
+        getCustomerOffers,
+        customerData,
       }}
     >
       {children}
