@@ -40,19 +40,36 @@ export const Content = styled.main`
     }
   }
 
-  button {
-    display: block;
-    align-self: flex-end;
+  // Tablet breakpoint
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 0.5rem 1.5rem 3rem 1.5rem;
+  }
+
+  // Smartphone breakpoint
+  @media screen and (max-width: 767px) {
+    padding: 0.5rem 1.5rem 2rem 1.5rem;
+  }
+`;
+
+export const WrongCepButton = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  a {
     margin-top: 1rem;
     width: 20rem;
-    height: 4rem;
     border-radius: 20px;
     border: 1px solid red;
+    padding: 1rem 2rem;
     background-color: #e63f55;
 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
     color: var(--white);
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 1px;
 
     transition: filter 0.2s;
@@ -76,15 +93,5 @@ export const Content = styled.main`
     &:hover {
       filter: brightness(0.8);
     }
-  }
-
-  // Tablet breakpoint
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    padding: 0.5rem 1.5rem 3rem 1.5rem;
-  }
-
-  // Smartphone breakpoint
-  @media screen and (max-width: 767px) {
-    padding: 0.5rem 1.5rem 2rem 1.5rem;
   }
 `;

@@ -1,10 +1,11 @@
 import { ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
 import { OfferCatalog } from '../../components/OfferCatalog';
 import { PublicLayout } from '../../components/PublicLayout';
 import { useOffers } from '../../hooks/useOffers';
 
-import { Content } from './styles';
+import { Content, WrongCepButton } from './styles';
 
 export function Offers(): ReactElement {
   const { customerAdress } = useOffers();
@@ -19,7 +20,9 @@ export function Offers(): ReactElement {
 
         <OfferCatalog />
 
-        <button type="button">Ops, errei meu cep!</button>
+        <WrongCepButton>
+          <Link to="/">Ops, errei meu cep!</Link>
+        </WrongCepButton>
       </Content>
     </PublicLayout>
   );
