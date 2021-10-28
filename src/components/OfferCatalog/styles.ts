@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   // Smartphone breakpoint
   @media screen and (max-width: 767px) {
-    grid-template-columns: 330px;
+    grid-template-columns: 18.75rem;
     gap: 1.5rem;
     padding: 1rem;
   }
