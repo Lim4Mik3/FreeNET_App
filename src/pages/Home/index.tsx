@@ -15,7 +15,6 @@ import { Content } from './styles';
 
 export function Home(): ReactElement {
   const [zipcode, setZipcode] = useState('');
-
   const { getCustomerOffers } = useOffers();
 
   const handleZipcodeInput: ChangeEventHandler<HTMLInputElement> = (event) => {
