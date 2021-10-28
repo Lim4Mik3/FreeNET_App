@@ -1,5 +1,6 @@
 module.exports = {
   singleQuote: true,
   trailingComa: "all",
-  allowParens: "avoid"
+  allowParens: "avoid",
+  endOfLine: 'lf'
 }
