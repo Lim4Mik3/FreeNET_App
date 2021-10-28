@@ -1,7 +1,9 @@
 import { ReactElement } from 'react';
+
+import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 
-import { Content, Footer } from './styles';
+import { Content } from './styles';
 
 export function Home(): ReactElement {
   return (
@@ -25,10 +27,7 @@ export function Home(): ReactElement {
         </div>
       </Content>
 
-      <Footer>
-        <p>FreeNET Serviços de comunicação e internet.</p>
-        <span>Ligue e contrate agora mesmo</span>
-      </Footer>
+      <Footer />
     </>
   );
 }

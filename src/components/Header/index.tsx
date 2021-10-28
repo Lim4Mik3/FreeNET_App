@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { HeaderContainer, Wrapper, HeaderActions } from './styles';
 
 const Header: React.FC = () => {
