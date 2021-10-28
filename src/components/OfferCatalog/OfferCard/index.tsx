@@ -1,18 +1,27 @@
+import { useOffers } from '../../../hooks/useOffers';
 import { Container } from './styles';
 
 interface OfferCard {
+  id: number;
   title: string;
   price: string;
   description: string;
+  isSelected: boolean;
 }
 
 const OfferCard: React.FC<OfferCard> = ({
+  id,
   title,
   price,
   description,
+  isSelected,
 }: OfferCard) => {
+  const { handleSelectedOffer } = useOffers();
+
+  const handleCardClick = (): void => handleSelectedOffer(id);
+
   return (
-    <Container>
+    <Container onClick={handleCardClick} selected={isSelected}>
       <header>
         <span>{title}</span>
       </header>

@@ -12,6 +12,7 @@ import offersDataJSON from '../offers.json';
 
 interface OffersContextData {
   getCustomerOffers: (zipcode: string) => Promise<void>;
+  handleSelectedOffer: (offerId: number) => void;
   customerData: CustomerDataDTO;
 }
 
@@ -75,10 +76,30 @@ export function OffersContextProvider({
     history.push('/offers');
   };
 
+  const handleSelectedOffer = (offerId: number): void => {
+    const offers = [...customerData.offers];
+
+    const offersUpdated = offers.map((offer) => {
+      if (offer.id === offerId) {
+        offer.isSelected = true;
+      } else {
+        offer.isSelected = false;
+      }
+
+      return offer;
+    });
+
+    setCustomerData({
+      ...customerData,
+      offers: offersUpdated,
+    });
+  };
+
   return (
     <OffersContext.Provider
       value={{
         getCustomerOffers,
+        handleSelectedOffer,
         customerData,
       }}
     >

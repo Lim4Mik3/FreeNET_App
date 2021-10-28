@@ -24,6 +24,8 @@ const OfferCatalog: React.FC = () => {
         offers.map((offer) => (
           <OfferCard
             key={offer.id}
+            id={offer.id}
+            isSelected={offer.isSelected}
             title={offer.name}
             description={`Tenha ${
               offer.id * 100

@@ -1,10 +1,24 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  selected?: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   padding: 1rem;
   background-color: #f5f5f5;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 2px rgba(18, 18, 18, 0.3);
+  box-shadow: ${(props) =>
+    props.selected === true
+      ? '0px 0px 10px 2px rgba(255, 18, 18, 0.8)'
+      : '0px 0px 10px 2px rgba(18, 18, 18, 0.3)'};
+
+  transition: all 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(255, 18, 18, 0.3);
+  }
 
   header {
     height: 2.5rem;
