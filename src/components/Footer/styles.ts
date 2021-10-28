@@ -14,7 +14,6 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   p,
   span {
     font-size: 1.5rem;

@@ -1,15 +1,12 @@
 import { ReactElement } from 'react';
 
-import { Footer } from '../../components/Footer';
-import { Header } from '../../components/Header';
+import { PublicLayout } from '../../components/PublicLayout';
 
 import { Content } from './styles';
 
 export function Home(): ReactElement {
   return (
-    <>
-      <Header />
-
+    <PublicLayout>
       <Content>
         <div>
           <h1>Olá visitante, seja bem vindo!</h1>
@@ -26,8 +23,6 @@ export function Home(): ReactElement {
           </form>
         </div>
       </Content>
-
-      <Footer />
-    </>
+    </PublicLayout>
   );
 }
