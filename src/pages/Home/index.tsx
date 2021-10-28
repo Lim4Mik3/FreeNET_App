@@ -1,12 +1,21 @@
-import { ReactElement } from 'react';
+import { ChangeEventHandler, ReactElement, useState } from 'react';
 import { Button } from '../../components/Form/Button';
 import { Input } from '../../components/Form/Input';
 
 import { PublicLayout } from '../../components/PublicLayout';
+import { zipcodeMask } from '../../utils/zipcodeMask';
 
 import { Content } from './styles';
 
 export function Home(): ReactElement {
+  const [zipcode, setZipcode] = useState('');
+
+  const handleZipcodeInput: ChangeEventHandler<HTMLInputElement> = (event) => {
+    const { value } = event.target;
+
+    setZipcode(zipcodeMask(value));
+  };
+
   return (
     <PublicLayout>
       <Content>
@@ -19,7 +28,13 @@ export function Home(): ReactElement {
           </span>
 
           <form>
-            <Input subtitle="Apenas números" type="text" />
+            <Input
+              subtitle="Apenas números"
+              type="text"
+              placeholder="XXXXX-XXX"
+              onChange={handleZipcodeInput}
+              value={zipcode}
+            />
 
             <Button title="Buscar" type="submit" />
           </form>

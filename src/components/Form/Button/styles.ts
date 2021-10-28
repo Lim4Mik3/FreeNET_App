@@ -9,7 +9,7 @@ export const ButtonCustom = styled.button`
   border: 1px solid red;
   background-color: #e63f55;
 
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1px;
