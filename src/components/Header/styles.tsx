@@ -27,9 +27,16 @@ export const Wrapper = styled.div`
     color: var(--white);
     letter-spacing: 3px;
 
-    @media (max-width: 720px) {
+    // Tablet breakpoint
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 2.2rem;
+      letter-spacing: 2.5px;
+    }
+
+    // Smartphone breakpoint
+    @media screen and (max-width: 767px) {
       font-size: 2rem;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
     }
 
     span {
@@ -37,8 +44,15 @@ export const Wrapper = styled.div`
       color: var(--black);
       letter-spacing: 2px;
 
-      @media (max-width: 720px) {
-        font-size: 1.5rem;
+      // Tablet breakpoint
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 1.7rem;
+        letter-spacing: 1.7px;
+      }
+
+      // Smartphone breakpoint
+      @media screen and (max-width: 767px) {
+        font-size: 1.4rem;
         letter-spacing: 1px;
       }
     }
@@ -49,7 +63,13 @@ export const HeaderActions = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 720px) {
+  // Tablet breakpoint
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    flex-direction: row;
+  }
+
+  // Smartphone breakpoint
+  @media screen and (max-width: 767px) {
     flex-direction: column;
   }
 
@@ -58,8 +78,14 @@ export const HeaderActions = styled.div`
     color: var(--white);
     letter-spacing: 1px;
 
-    @media (max-width: 720px) {
+    // Tablet breakpoint
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       font-size: 1.3rem;
+    }
+
+    // Smartphone breakpoint
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
     }
   }
 
@@ -75,9 +101,17 @@ export const HeaderActions = styled.div`
 
     transition: filter 0.2s;
 
-    @media (max-width: 720px) {
+    // Tablet breakpoint
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      width: 9.5rem;
+      height: 2.3rem;
+    }
+
+    // Smartphone breakpoint
+    @media screen and (max-width: 767px) {
       width: 9rem;
       height: 2rem;
+      margin-top: 0.2rem;
     }
 
     &:hover {
