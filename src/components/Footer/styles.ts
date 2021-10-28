@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   width: 100%;
   height: 10rem;
+  padding: 2rem 4rem;
   background: rgb(245, 23, 53);
   background: linear-gradient(
     157deg,
@@ -14,9 +15,21 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   p,
   span {
     font-size: 1.5rem;
     color: var(--white);
+    text-align: center;
+
+    // Tablet breakpoint
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 1.5rem;
+    }
+
+    // Smartphone breakpoint
+    @media screen and (max-width: 767px) {
+      font-size: 1.2rem;
+    }
   }
 `;
