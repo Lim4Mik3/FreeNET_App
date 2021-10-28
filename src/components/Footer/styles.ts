@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  height: 10rem;
   padding: 2rem 4rem;
   background: rgb(245, 23, 53);
   background: linear-gradient(

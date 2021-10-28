@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
-import { Home } from './pages/Home';
+import { Offers } from './pages/Offers';
 import { GlobalStyle } from './styles/Global';
 
 function App(): ReactElement {
   return (
     <>
-      <Home />
+      <Offers />
       <GlobalStyle />
     </>
   );

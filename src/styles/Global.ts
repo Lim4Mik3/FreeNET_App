@@ -10,13 +10,13 @@ export const GlobalStyle = createGlobalStyle`
     --title: #212121;
   }
 
-  @media (max-width: 1080px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     html {
       font-size: 93.75%;
     }
   }
 
-  @media (max-width: 720px) {
+  @media screen and (max-width: 767px) {
     html {
       font-size: 87.5%;
     }
