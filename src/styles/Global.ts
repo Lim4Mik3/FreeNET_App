@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
 
   button, input {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   button {

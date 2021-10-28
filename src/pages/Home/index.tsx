@@ -12,7 +12,7 @@ export function Home(): ReactElement {
 
         <Actions>
           <h3>11 3601-3601</h3>
-          <button type="button">Contrate</button>
+          <button type="button">CONTRATE</button>
         </Actions>
       </Container>
     </Header>
