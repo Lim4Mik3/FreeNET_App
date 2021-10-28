@@ -3,12 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
   :root {
-    --red-chill: #F51720,
-    --gold: #F8D210,
-    --pink: #FA26A0,
-    --white: #fafafa,
-    --black: #121211,
-    --title: #212121,
+    --red-chill: #F51720;
+    --gold: #F8D210;
+    --pink: #FA26A0;
+    --white: #fafafa;
+    --black: #121211;
+    --title: #212121;
   }
 
   @media (max-width: 1080px) {

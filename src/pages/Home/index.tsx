@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Header, Container } from './styles';
+import { Header, Container, Actions } from './styles';
 
 export function Home(): ReactElement {
   return (
@@ -10,10 +10,10 @@ export function Home(): ReactElement {
           Free<span>NET</span>
         </strong>
 
-        <div>
+        <Actions>
           <h3>11 3601-3601</h3>
           <button type="button">Contrate</button>
-        </div>
+        </Actions>
       </Container>
     </Header>
   );

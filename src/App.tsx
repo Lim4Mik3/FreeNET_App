@@ -5,8 +5,8 @@ import { GlobalStyle } from './styles/Global';
 function App(): ReactElement {
   return (
     <>
-      <GlobalStyle />
       <Home />
+      <GlobalStyle />
     </>
   );
 }
