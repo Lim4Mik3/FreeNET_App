@@ -14,6 +14,7 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: auto;
 
   p,
   span {

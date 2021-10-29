@@ -55,7 +55,7 @@ export const WrongCepButton = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-items: end;
 
   a {
     margin-top: 1rem;

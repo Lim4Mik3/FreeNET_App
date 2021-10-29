@@ -22,15 +22,14 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  html, body, #root {
+    height: 100%
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  #root {
-    width: 100vw;
-    height: 100vh;
   }
 
   body {

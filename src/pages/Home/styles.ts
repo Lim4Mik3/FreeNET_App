@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Content = styled.main`
+  height: 100%;
+  width: 100%;
+
   div {
-    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     padding: 6rem 2rem;

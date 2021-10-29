@@ -7,9 +7,7 @@ export const Container = styled.div`
   gap: 2.5rem;
   padding: 1rem 2rem;
   align-self: center;
-
   overflow: auto;
-  height: 100%;
 
   // Tablet breakpoint
   @media screen and (min-width: 768px) and (max-width: 1023px) {
