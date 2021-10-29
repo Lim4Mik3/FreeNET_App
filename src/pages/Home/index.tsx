@@ -34,7 +34,7 @@ export function Home(): ReactElement {
     <PublicLayout>
       <Content>
         <div>
-          <h1>Olá, seja bem vindo!</h1>
+          <h1>Olá visitante, seja bem vindo!</h1>
 
           <span>
             Para buscarmos os planos disponíveis, por favor insira seu CEP
