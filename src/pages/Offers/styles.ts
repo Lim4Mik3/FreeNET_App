@@ -5,19 +5,19 @@ export const Content = styled.main`
   height: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   // Tablet breakpoint
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    padding: 1rem 1.3rem;
+    padding: 0.5rem 1.3rem;
   }
 
   // Smartphone breakpoint
   @media screen and (max-width: 767px) {
-    padding: 0.8rem;
+    padding: 0.3rem;
   }
 
   span {
@@ -53,12 +53,12 @@ export const Content = styled.main`
 
 export const WrongCepButton = styled.div`
   width: 100%;
+  padding: 0.5rem;
   display: flex;
-  align-items: center;
-  justify-items: end;
 
   a {
-    margin-top: 1rem;
+    // margin-top: 1rem;
+    margin-left: auto;
     width: 20rem;
     border-radius: 20px;
     border: 1px solid red;
